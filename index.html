@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Web & Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="tsparticles" style="position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0;"></div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo mono">&lt;DEV_DATA /&gt;</div>
+                <div class="nav-links mono">
+                    <a href="#skills">_stack</a>
+                    <a href="#projects">_proyectos</a>
+                    <a href="#contact" style="color: var(--accent)">_contacto</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <div>
+            <span class="hero-tag mono">> SYSTEM STATUS: READY</span>
+            <h1>Ingeniería Web Full Stack<br>+ Inteligencia de Datos</h1>
+            <p>Construyo arquitecturas digitales donde el diseño limpio se encuentra con el Big Data. Transformo datos complejos en interfaces funcionales.</p>
+            <div>
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contact" class="btn btn-outline">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title mono">01. Arsenal Tecnológico</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3 class="skill-header mono">./Front_End</h3>
+                <div class="skill-list mono">
+                    <span>React.js</span>
+                    <span>Next.js</span>
+                    <span>Tailwind</span>
+                    <span>D3.js (Data Viz)</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3 class="skill-header mono">./Back_End</h3>
+                <div class="skill-list mono">
+                    <span>Node.js</span>
+                    <span>Python / FastAPI</span>
+                    <span>PostgreSQL</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3 class="skill-header mono">./Data_&_AI</h3>
+                <div class="skill-list mono">
+                    <span>Pandas / NumPy</span>
+                    <span>TensorFlow</span>
+                    <span>Spark</span>
+                    <span>NLP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title mono">02. Casos de Estudio</h2>
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                <div class="project-visual">
+                    <span class="mono">[ IMG: Web Dashboard + AI Graph ]</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags mono">
+                        <span class="tag">#REACT</span>
+                        <span class="tag">#PYTHON</span>
+                        <span class="tag">#PREDICTIVE_MODEL</span>
+                    </div>
+                    <h3>CryptoSentimient AI</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">
+                        Plataforma que analiza el sentimiento de Twitter en tiempo real para predecir fluctuaciones en criptomonedas.
+                    </p>
+                    <div class="project-footer mono">
+                        <a href="#" class="link-icon">-> GitHub Repo</a>
+                        <a href="#" class="link-icon">-> Live Demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual">
+                    <span class="mono">[ IMG: E-commerce Architecture ]</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags mono">
+                        <span class="tag">#NEXTJS</span>
+                        <span class="tag">#BIGDATA</span>
+                        <span class="tag">#RECOMMENDER</span>
+                    </div>
+                    <h3>Motor de Recomendación E-com</h3>
+                    <p class="text-muted" style="margin-top: 0.5rem;">
+                        Sistema de recomendación personalizado basado en historial de navegación y filtrado colaborativo procesando 1TB de logs.
+                    </p>
+                    <div class="project-footer mono">
+                        <a href="#" class="link-icon">-> GitHub Repo</a>
+                        <a href="#" class="link-icon">-> Live Demo</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+    
+    <script src="./js/particles.js"></script>
+</body>
+</html>
