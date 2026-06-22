@@ -445,3 +445,108 @@ nav {
     from, to { opacity: 1; }
     50% { opacity: 0; }
 }
+
+/* Estilos para los botones de filtro */
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Hacer que las tarjetas parezcan accionables (clicables) */
+.project-card {
+    cursor: pointer;
+}
+
+.project-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-text {
+    position: absolute;
+    font-size: 0.8rem;
+    color: #444;
+    transition: color 0.3s;
+}
+
+.project-card:hover .placeholder-text {
+    color: var(--accent);
+}
+
+/* Estilos del contenedor del Modal (Fondo oscuro difuminado) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 17, 21, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 2rem 1rem;
+}
+
+/* Caja de contenido del Modal */
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón cerrar */
+.close-modal-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.close-modal-btn:hover {
+    color: #ff4a4a; /* Rojo sutil para cerrar */
+}
+
+/* Estructura interna del contenido del deep dive */
+.modal-grid-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+}
+
+.stack-section h4 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}

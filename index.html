@@ -106,47 +106,28 @@
     </section>
 
     <section id="projects" class="container">
-    <div class="projects-header">
-        <h2 class="section-title mono">01. Project_Selection</h2>
-    </div>
+        <h2 class="section-title mono">02. Casos de Estudio</h2>
+        
+        <div class="filter-bar mono" style="margin-bottom: 2rem; display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="filter-btn active" data-filter="todos">[_Todos]</button>
+            <button class="filter-btn" data-filter="end-to-end">[_Full-Stack / End-to-End]</button>
+            <button class="filter-btn" data-filter="ia">[_Inteligencia Artificial]</button>
+            <button class="filter-btn" data-filter="web">[_Desarrollo Web]</button>
+        </div>
 
-    <div class="projects-carousel" id="projectCarousel">
-        <article class="project-card-mini">
-            <div class="card-tag mono">IA & BIG DATA</div>
-            <h3>ReddiPulse</h3>
-            <p>Pipeline de análisis de sentimiento con Deep Learning y MongoDB Atlas en AWS.</p>
-            <div class="card-footer">
-    <div class="badge-container">
-        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-        <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS">
-        <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-    </div>
-    <a href="https://github.com/Larxmind/ReddiPulse" target="_blank" class="detail-link">Ver Código_</a>
-    </div>
-        </article>
-
-        <article class="project-card-mini">
-            <div class="card-tag mono">FRONTEND ARCHITECTURE</div>
-            <h3>AniManga Catalog</h3>
-            <p>Arquitectura en Angular con gestión de estado mediante Redux.</p>
-            <div class="badge-container">
-                <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular">
-                <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux">
-                <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+        <div id="contenedor-proyectos" class="projects-grid">
             </div>
-             <a href="https://github.com/Larxmind/catalogo_anime_manga.git" target="_blank" class="detail-link">Ver Código_</a>
-        </article>
-
-        <article class="project-card-mini placeholder-card">
-            <div class="card-tag mono">NEXT_PIECE</div>
-            <h3>Próximo Proyecto</h3>
-            <p>Preparando una nueva pieza para el puzzle de datos...</p>
-        </article>
-    </div>
     </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script> 
-    <script src="./js/particles.js"></script>
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal-btn mono">&times; _CERRAR</span>
+                <div id="modal-dynamic-body">
+                </di>
+            </div>
+        </div>
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/proyectos.js"></script> 
 </body>
 </html>
