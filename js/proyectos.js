@@ -4,7 +4,7 @@ const listaProyectos = [
     {
         id: 1,
         "titulo": "Student Dropout Predictor AI",
-    "categoria": "end-to-end",
+    "categoria":["end-to-end", "ia"],
     "tags": ["#MACHINE_LEARNING", "#MLOPS", "#WEB_DASHBOARD"],
     "descripcionCorta": "Ecosistema integral de IA para la detección temprana y prevención del abandono escolar en entornos académicos.",
     "descripcionLarga": "Este proyecto aborda el ciclo completo de un sistema inteligente de monitorización. Diseñé un pipeline de ingesta y ETL en Python para procesar logs de actividad estudiantil y datos sociodemográficos. Para la predicción, implementé un modelo Random Forest Classifier optimizado mediante GridSearchCV enfocado en maximizar el F1-Score (alcanzando un 0.9569). El despliegue incluye un pipeline de MLOps integrado con Hugging Face Hub para la distribución del artefacto serializado (.pkl), una interfaz de inferencia rápida en Gradio y un dashboard analítico completo que consume la API para priorizar la intervención de los coordinadores. <span style=\"color: #ff6b6b;\" font-weight=\"bold\">La Demo de gradio solo muestra el porcentaje de riesgo de abandono, no hay inferencia con los LLMs.</span>",
@@ -18,20 +18,21 @@ const listaProyectos = [
         }
     },
     {
-        id: 2,
-        titulo: "Motor de Recomendación E-com",
-        categoria: "ia",
-        tags: ["#NEXTJS", "#BIGDATA", "#RECOMMENDER"],
-        descripcionCorta: "Sistema de recomendación personalizado basado en historial de navegación y filtrado colaborativo procesando 1TB de logs.",
-        descripcionLarga: "Desarrollo de un sistema de recomendación híbrido para una tienda electrónica virtual. Utiliza técnicas de filtrado colaborativo y basado en contenido para sugerir productos a los usuarios en tiempo real. La arquitectura está diseñada para escalar, permitiendo simular el procesamiento de grandes volúmenes de datos de interacción (logs de clicks y compras).",
-        imagen: "./assets/recommender-project.jpg",
-        github: "https://github.com/... ",
-        demo: "https://demo... ",
-        stackDetallado: {
-            "Algoritmo": "Filtrado colaborativo implementado con Python y Scikit-Learn.",
-            "Procesamiento": "Simulación de tuberías de datos estructuradas para análisis eficiente.",
-            "Interfaz": "Next.js con Server-Side Rendering para optimizar el SEO de los productos recomendados."
-        }
+    "id": 2,
+    "titulo": "Core Recomendador Anime XAI",
+    "categoria": ["ia"],
+    "tags": ["#NEXTJS", "#AWS", "#FASTAPI", "#POLARS", "#DOCKER", "#DEVOPS"],
+    "descripcionCorta": "Motor de recomendación híbrido y explicable (XAI) con filtrado demográfico triple y arquitectura multi-nube en tiempo real.",
+    "descripcionLarga": "Desarrollo y despliegue de un motor de recomendación híbrido avanzado que combina similitud semántica de guiones (NLP) mediante embeddings vectoriales (all-MiniLM-L6-v2), intersección de categorías (Índice de Jaccard) y filtrado demográfico triple (género, edad y procedencia geográfica). El sistema procesa un volumen de datos optimizado de 110.2 MB de matrices y catálogos de manera eficiente en memoria gracias al motor en Rust de Polars, logrando latencias de respuesta óptimas. La interfaz explicable (XAI) permite calibrar dinámicamente los pesos del algoritmo en tiempo real, integrando un consumo de imágenes de MyAnimeList optimizado sin Layout Shift.",
+    "imagen": "./assets/proyectos/recomendador_anime.png", 
+    "github": "https://github.com/larxmind/RecomendadorAnime", 
+    "demo": "https://recomendador-anime-ff8y2d41z-larxminds-projects.vercel.app/",
+    "stackDetallado": {
+        "Algoritmo & Datos": "NLP (Similitud de Coseno), Coeficiente de Jaccard y Heurística Demográfica sobre datasets indexados en memoria con Polars.",
+        "Backend (AWS)": "FastAPI (Python 3.12) asíncrono y modularizado, sirviendo el motor de inferencia en caliente con latencias mínimas.",
+        "DevOps & Nube": "Arquitectura dockerizada (Dockerfile + Compose) con mapeo de volúmenes de datos persistentes desplegada en una instancia Amazon AWS EC2.",
+        "Interfaz (Vercel)": "Next.js con Tailwind CSS y control de estado reactivo, comunicada de forma segura mediante un túnel encriptado HTTPS con ngrok para evitar restricciones de Contenido Mixto (Mixed Content)."
+    }
     }
 ];
 
@@ -44,7 +45,7 @@ function renderizarProyectos(categoriaFiltro = "todos") {
 
     // Filtrar proyectos
     const proyectosFiltrados = listaProyectos.filter(proy => 
-        categoriaFiltro === "todos" || proy.categoria === categoriaFiltro
+        proy.categoria.includes(categoriaFiltro) || categoriaFiltro === "todos"
     );
 
     // Generar el HTML de las tarjetas
