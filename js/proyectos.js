@@ -26,7 +26,7 @@ const listaProyectos = [
     "descripcionLarga": "Desarrollo y despliegue de un motor de recomendación híbrido avanzado que combina similitud semántica de guiones (NLP) mediante embeddings vectoriales (all-MiniLM-L6-v2), intersección de categorías (Índice de Jaccard) y filtrado demográfico triple (género, edad y procedencia geográfica). El sistema procesa un volumen de datos optimizado de 110.2 MB de matrices y catálogos de manera eficiente en memoria gracias al motor en Rust de Polars, logrando latencias de respuesta óptimas. La interfaz explicable (XAI) permite calibrar dinámicamente los pesos del algoritmo en tiempo real, integrando un consumo de imágenes de MyAnimeList optimizado sin Layout Shift.",
     "imagen": "./assets/proyectos/recomendador_anime.png", 
     "github": "https://github.com/larxmind/RecomendadorAnime", 
-    "demo": "https://recomendador-anime-ff8y2d41z-larxminds-projects.vercel.app/",
+    "demo": "https://recomendador-anime.vercel.app/",
     "stackDetallado": {
         "Algoritmo & Datos": "NLP (Similitud de Coseno), Coeficiente de Jaccard y Heurística Demográfica sobre datasets indexados en memoria con Polars.",
         "Backend (AWS)": "FastAPI (Python 3.12) asíncrono y modularizado, sirviendo el motor de inferencia en caliente con latencias mínimas.",
